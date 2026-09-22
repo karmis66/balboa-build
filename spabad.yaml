@@ -18,9 +18,8 @@ ota:
   platform: esphome
 
 logger:
+  hardware_uart: USB_SERIAL_JTAG
   level: DEBUG
-  logs:
-    BalboaSpa.CRC: NONE
 
 uart:
   - id: uart_bus
