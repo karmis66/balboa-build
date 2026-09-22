@@ -24,6 +24,7 @@ uart:
     tx_pin: GPIO16
     rx_pin: GPIO17
     baud_rate: 115200
+    debug:
 
 external_components:
   - source:
@@ -35,8 +36,8 @@ external_components:
 balboa_spa:
   id: my_balboa
   uart_id: uart_bus
-  flow_control_pin: GPIO21
 
 climate:
   - platform: balboa_spa
     name: "Spabad Temperatur"
+    balboa_spa_id: my_balboa
