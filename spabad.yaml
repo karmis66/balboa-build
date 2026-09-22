@@ -41,7 +41,7 @@ climate:
     name: "Spabad Temperatur"
 
 binary_sensor:
-  - platform: balboa
+  - platform: balboa_spa
     circ_pump:
       name: "Cirkulationspump"
     pump_1:
