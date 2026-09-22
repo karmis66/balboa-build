@@ -5,10 +5,12 @@ esphome:
 esp32:
   board: esp32-c6-devkitc-1
   variant: esp32c6
+  framework:
+    type: esp-idf
 
 wifi:
-  ssid: "DITT_WIFI_NAMN"
-  password: "DITT_WIFI_LÖSENORD"
+  ssid: "Karmskogs_IoT"
+  password: "DITT_WIFI_LÖSENORD"  # Skriv in ditt lösenord till Karmskogs_IoT här
 
 api:
 
@@ -35,10 +37,6 @@ balboa:
 climate:
   - platform: balboa
     name: "Spabad Temperatur"
-    visual:
-      min_temperature: 10 °C
-      max_temperature: 40 °C
-      temperature_step: 0.5 °C
 
 binary_sensor:
   - platform: balboa
