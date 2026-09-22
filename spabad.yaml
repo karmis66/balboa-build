@@ -14,21 +14,17 @@ esp32:
 wifi:
   ssid: "Karmskogs_IoT"
   password: "TeleCaster"
-  # Tvinga snabb anslutning och inaktivera strömsparläge på ESP32-C6:
-  fast_connect: true
-  power_save_mode: none
+  power_save_mode: NONE
 
 api:
 
 ota:
   platform: esphome
 
-# Stäng av fysisk serieport-loggning helt för att förhindra krasch vid boot:
 logger:
   baud_rate: 0
   level: DEBUG
 
-# Använd hårdvaru-UART0 utan konflikter:
 uart:
   - id: uart_bus
     tx_pin: GPIO16
