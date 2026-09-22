@@ -28,16 +28,16 @@ uart:
 external_components:
   - source:
       type: git
-      url: https://github.com/plandai/esp-balboa-spa
-    components: [ balboa ]
+      url: https://github.com/brianfeucht/esphome-balboa-spa
+      ref: main
+    components: [ balboa_spa ]
 
-balboa:
+balboa_spa:
   id: my_balboa
   uart_id: uart_bus
-  flow_control_pin: GPIO21
 
 climate:
-  - platform: balboa
+  - platform: balboa_spa
     name: "Spabad Temperatur"
 
 binary_sensor:
