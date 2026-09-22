@@ -7,8 +7,11 @@ esp32:
   variant: esp32c6
   framework:
     type: esp-idf
-  board_build:
-    flash_size: 16MB
+
+# Sätt PlatformIO-inställningar här:
+platformio_options:
+  board_build.flash_size: 16MB
+  board_upload.flash_size: 16MB
 
 wifi:
   ssid: "Karmskogs_IoT"
