@@ -9,8 +9,7 @@ esp32:
     type: esp-idf
     sdkconfig_options:
       CONFIG_ESPTOOLPY_FLASHSIZE_16MB: y
-      CONFIG_ESPTOOLPY_FLASHMODE_DIO: y
-      CONFIG_ESPTOOLPY_FLASHFREQ_80M: y
+      CONFIG_ESP_TASK_WDT_TIMEOUT_S: "10"
 
 wifi:
   ssid: "Karmskogs_IoT"
@@ -21,10 +20,12 @@ api:
 ota:
   platform: esphome
 
+# Stäng av fysisk serieport-loggning helt för att förhindra krasch vid boot:
 logger:
-  hardware_uart: USB_SERIAL_JTAG
+  baud_rate: 0
   level: DEBUG
 
+# Använd hårdvaru-UART0 utan konflikter:
 uart:
   - id: uart_bus
     tx_pin: GPIO16
