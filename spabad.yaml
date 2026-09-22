@@ -14,6 +14,9 @@ esp32:
 wifi:
   ssid: "Karmskogs_IoT"
   password: "TeleCaster"
+  # Tvinga snabb anslutning och inaktivera strömsparläge på ESP32-C6:
+  fast_connect: true
+  power_save_mode: none
 
 api:
 
