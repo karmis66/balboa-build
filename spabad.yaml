@@ -10,7 +10,7 @@ esp32:
 
 wifi:
   ssid: "Karmskogs_IoT"
-  password: "DITT_WIFI_LÖSENORD"  # Skriv in ditt lösenord till Karmskogs_IoT här
+  password: "TeleCaster"
 
 api:
 
@@ -26,7 +26,9 @@ uart:
     baud_rate: 115200
 
 external_components:
-  - source: github://ccostan/esp-balboa-spa
+  - source:
+      type: git
+      url: https://github.com/plandai/esp-balboa-spa
     components: [ balboa ]
 
 balboa:
