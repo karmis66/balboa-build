@@ -1,0 +1,52 @@
+esphome:
+  name: spabad-balboa
+  friendly_name: Spabad Balboa
+
+esp32:
+  board: esp32-c6-devkitc-1
+  variant: esp32c6
+
+wifi:
+  ssid: "DITT_WIFI_NAMN"
+  password: "DITT_WIFI_LÖSENORD"
+
+api:
+
+ota:
+  platform: esphome
+
+logger:
+
+uart:
+  - id: uart_bus
+    tx_pin: GPIO16
+    rx_pin: GPIO17
+    baud_rate: 115200
+
+external_components:
+  - source: github://ccostan/esp-balboa-spa
+    components: [ balboa ]
+
+balboa:
+  id: my_balboa
+  uart_id: uart_bus
+  flow_control_pin: GPIO21
+
+climate:
+  - platform: balboa
+    name: "Spabad Temperatur"
+    visual:
+      min_temperature: 10 °C
+      max_temperature: 40 °C
+      temperature_step: 0.5 °C
+
+binary_sensor:
+  - platform: balboa
+    circ_pump:
+      name: "Cirkulationspump"
+    pump_1:
+      name: "Massagepump 1"
+    light:
+      name: "Belysning"
+    heater:
+      name: "Värmare"
