@@ -27,4 +27,4 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: spabad-firmware
-          path: .esphome/build/spabad-balboa/.pioenvs/spabad-balboa/firmware.bin
+          path: .esphome/build/spabad-balboa/.pioenvs/spabad-balboa/firmware.factory.bin
