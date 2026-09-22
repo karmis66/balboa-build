@@ -9,7 +9,8 @@ esp32:
     type: esp-idf
     sdkconfig_options:
       CONFIG_ESPTOOLPY_FLASHSIZE_16MB: y
-      CONFIG_ESPTOOLPY_FLASHSIZE: "16MB"
+      CONFIG_ESPTOOLPY_FLASHMODE_DIO: y
+      CONFIG_ESPTOOLPY_FLASHFREQ_80M: y
 
 wifi:
   ssid: "Karmskogs_IoT"
