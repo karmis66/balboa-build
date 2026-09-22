@@ -35,18 +35,8 @@ external_components:
 balboa_spa:
   id: my_balboa
   uart_id: uart_bus
+  flow_control_pin: GPIO21
 
 climate:
   - platform: balboa_spa
     name: "Spabad Temperatur"
-
-binary_sensor:
-  - platform: balboa_spa
-    circ_pump:
-      name: "Cirkulationspump"
-    pump_1:
-      name: "Massagepump 1"
-    light:
-      name: "Belysning"
-    heater:
-      name: "Värmare"
