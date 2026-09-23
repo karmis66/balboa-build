@@ -1,0 +1,8 @@
+# ESPHome-generated files
+/.esphome/
+
+# Private passwords and keys
+/secrets.yaml
+
+# Build files
+/build/
